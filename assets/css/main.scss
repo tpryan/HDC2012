@@ -1,0 +1,135 @@
+$orange: #ff8a00;
+$darkestgrey: #313337;
+$darkgrey: #45484d;
+$lightgrey: #f2f2f4;
+$grey: #c2c2c2;
+
+$bodyfont: 'Segoe Light', "Helvetica Neue", Helvetica, 'Arial', sans-serif;
+$headingfont: 'Segoe Semibold', "Helvetica Neue", Helvetica, 'Arial', sans-serif;
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: $bodyfont;
+	border-top: 5px solid $darkestgrey; 
+	background-color: #FFFFFF;
+
+}
+a{
+	text-decoration: none;
+	color: $orange;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.heading{
+	font-family: $headingfont;
+	font-weight: regular;
+
+}
+
+h1, h2, h3{
+	@extend .heading;
+}
+
+body > header{ 
+	background-color: $darkgrey;
+	color: $orange;
+	padding: 10px 0 15px 0;
+	& > *{
+		@extend .centered;
+	}
+	h1{
+		min-height: 70px;
+		font-size: 3em;
+		background-image: url("logo.png");
+		background-repeat: no-repeat;
+		background-size: 161px 67px;
+		background-position: 10px 0;
+		span{
+			display: block;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+}
+body > nav{
+	background-color: $orange;
+	padding-top: 10px;
+	padding-bottom: 10px;  
+	& > *{
+		@extend .centered;
+	}
+	ul{
+		list-style: none;
+		li{
+			font-size: 1.5em;
+			@extend .heading;	
+			display: inline-block;
+			padding-right: 10px;
+			a{
+				color: #FFFFFF;
+				text-decoration: none;
+				&:hover{color: $darkestgrey};
+			}
+		}
+	}
+
+}
+h3{
+	font-size: 1.3em;
+	color: $darkestgrey;
+	background-color: $lightgrey;
+}
+
+#maincontent{
+	padding-top: 10px;
+	& > *{
+		@extend .centered;
+	}
+}
+
+time{
+	@extend .heading;
+	color: $grey;
+	font-size: 1.3em;
+	border-bottom: 1px solid $grey;
+	display: block;
+}
+article{
+	padding-bottom: 20px;
+	h1{
+		font-size: 1.5rem;
+		margin: 0;
+	}
+	p{
+		margin: 0;
+	}
+}
+
+body > footer{ 
+	background-color: $darkgrey;
+	color: $orange;
+	& > *{
+		@extend .centered;
+	}
+	p{
+		margin: 0 0;
+	}
+}
+
+.day{
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+
+.centered{
+	margin: 0 auto;
+	max-width: 1000px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
