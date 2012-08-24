@@ -85,3 +85,35 @@ body > footer {
   max-width: 1000px;
   padding-left: 10px;
   padding-right: 10px; }
+
+@media screen and (max-width: 350px) {
+  body > nav ul li {
+    display: block; } }
+@media screen and (min-width: 760px) {
+  .centered, body > header > *, body > nav > *, #maincontent > *, body > footer > * {
+    margin: 0 auto;
+    max-width: 760px;
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  #maincontent section article {
+    vertical-align: top;
+    display: inline-block;
+    width: 175px;
+    padding-right: 10px; }
+    #maincontent section article.fullslot {
+      width: 100%; } }
+@media screen and (min-width: 1000px) {
+  .centered, body > header > *, body > nav > *, #maincontent > *, body > footer > * {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  #maincontent section article {
+    vertical-align: top;
+    display: inline-block;
+    width: 225px;
+    padding-right: 10px; }
+    #maincontent section article.fullslot {
+      width: 100%; } }
